@@ -22,7 +22,7 @@ Selenium
 #### FrameWork: 
 SpecFlow
 #### Tools : 
-AutoIt
+AutoIt , Visual Studio
 
 ## Test automation project configuration
 
