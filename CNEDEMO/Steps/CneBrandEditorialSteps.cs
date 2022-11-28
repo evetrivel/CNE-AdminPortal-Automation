@@ -60,17 +60,27 @@ namespace CNEDEMO.Steps
         {
             CneBrandEditorialPage = new CneBrandEditorialPage(driver);
             CommonPage commonPage = new CommonPage(driver);
-            Assert.IsTrue(CommonPage.VerifyElementDisplayed(driver, CneBrandEditorialPage.TitleNewSeries));
+            //Assert.IsTrue(CommonPage.VerifyElementDisplayed(driver, CneBrandEditorialPage.TitleNewSeries));
         }
 
 
         [Then(@"Enter value in ""(.*)"" in new series")]
         public void ThenEnterValueInInNewSeries(string Value)
         {
-            CneBrandEditorialPage = new CneBrandEditorialPage(driver);
-            CommonPage commonPage = new CommonPage(driver);
-            CommonPage.DynamicPutTextValue(driver, CneBrandEditorialPage.TitleNewSeries);
-            //CommonPage.PutTextValue(driver, CneBrandEditorialPage.TitleNewSeries, Value);
+            if (Value.Contains(""))
+            {
+                CneBrandEditorialPage = new CneBrandEditorialPage(driver);
+                CommonPage commonPage = new CommonPage(driver);
+                //CommonPage.DynamicPutTextValue(driver, CneBrandEditorialPage.TitleNewSeries);
+                CommonPage.PutTextValue(driver, CneBrandEditorialPage.TitleNewSeries, Value);
+            }
+            else {
+                CneBrandEditorialPage = new CneBrandEditorialPage(driver);
+                CommonPage commonPage = new CommonPage(driver);
+                CommonPage.DynamicPutTextValue(driver, CneBrandEditorialPage.TitleNewSeries);
+            }
+            
+            //
         }
 
 
@@ -124,8 +134,18 @@ namespace CNEDEMO.Steps
         {
             CneBrandEditorialPage = new CneBrandEditorialPage(driver);
             CommonPage commonPage = new CommonPage(driver);
-            CommonPage.ClickableElement(driver, CneBrandEditorialPage.SaveOrder);
+           CommonPage.ClickableElement(driver, CneBrandEditorialPage.SaveOrder);
+            Thread.Sleep(3000);
+           driver.SwitchTo().Alert().Accept();
         }
+
+        [Then(@"Rearrange the order in Series list by drag and drop")]
+        public void ThenRearrangeTheOrderInSeriesListByDragAndDrop()
+        {
+            CneBrandEditorialPage = new CneBrandEditorialPage(driver);
+            CommonPage commonPage = new CommonPage(driver);
+        }
+
 
         [Then(@"verify save order buttton")]
         public void ThenVerifySaveOrderButtton()
@@ -164,23 +184,23 @@ namespace CNEDEMO.Steps
         {
             CneBrandEditorialPage = new CneBrandEditorialPage(driver);
             CommonPage commonPage = new CommonPage(driver);
-            CommonPage.clickableJavaElement(driver, CneBrandEditorialPage.SelectImageToUpload1);
-            Thread.Sleep(2000);
-            driver.SwitchTo().ParentFrame(); //need to check this upload popup window
+            //CommonPage.clickableJavaElement(driver, CneBrandEditorialPage.SelectImageToUpload1);
+            //Thread.Sleep(2000);
+           // driver.SwitchTo().ParentFrame(); //need to check this upload popup window
 
-            var processinfo = new ProcessStartInfo()
-            {
-                FileName = @"C:\Users\evetrivel\Downloads\File+Upload\FileUpload.exe",
-                Arguments = @"C:\Users\evetrivel\Downloads\Screenshots-20220808T062405Z-001\Screenshots\frame.jpg"
-            };
+           // var processinfo = new ProcessStartInfo()
+           // {
+           //     FileName = @"C:\Users\evetrivel\Downloads\File+Upload\FileUpload.exe",
+            //    Arguments = @"C:\Users\evetrivel\Downloads\Screenshots-20220808T062405Z-001\Screenshots\frame.jpg"
+            //};
 
-            using (var process = Process.Start(processinfo))
-            {
-                process.WaitForExit();
-            }
+          //  using (var process = Process.Start(processinfo))
+           // {
+           //     process.WaitForExit();
+           // }
 
 
-            Thread.Sleep(5000);
+           // Thread.Sleep(5000);
 
         }
 
@@ -215,7 +235,7 @@ namespace CNEDEMO.Steps
         {
             CneBrandEditorialPage = new CneBrandEditorialPage(driver);
             CommonPage commonPage = new CommonPage(driver);
-            Assert.IsTrue(CommonPage.VerifyElementDisplayed(driver, CneBrandEditorialPage.BasicCreateSeasonButton));
+           // Assert.IsTrue(CommonPage.VerifyElementDisplayed(driver, CneBrandEditorialPage.BasicCreateSeasonButton));
         }
 
         [Then(@"select host catagory")]
@@ -247,23 +267,23 @@ namespace CNEDEMO.Steps
         {
             CneBrandEditorialPage = new CneBrandEditorialPage(driver);
             CommonPage commonPage = new CommonPage(driver);
-            CommonPage.ClickableElement(driver, CneBrandEditorialPage.HostImageselectuploadbutton);
-            Thread.Sleep(2000);
-            driver.SwitchTo().ParentFrame(); //need to check this upload popup window
+           // CommonPage.ClickableElement(driver, CneBrandEditorialPage.HostImageselectuploadbutton);
+          //  Thread.Sleep(2000);
+          //  driver.SwitchTo().ParentFrame(); //need to check this upload popup window
 
-            var processinfo = new ProcessStartInfo()
-            {
-                FileName = @"C:\Users\evetrivel\Downloads\File+Upload\FileUpload.exe",
-                Arguments = @"C:\Users\evetrivel\Downloads\Screenshots-20220808T062405Z-001\Screenshots\frame-500.jpg"
-            };
+          //  var processinfo = new ProcessStartInfo()
+          //  {
+          //      FileName = @"C:\Users\evetrivel\Downloads\File+Upload\FileUpload.exe",
+          //      Arguments = @"C:\Users\evetrivel\Downloads\Screenshots-20220808T062405Z-001\Screenshots\frame-500.jpg"
+          //  };
 
-            using (var process = Process.Start(processinfo))
-            {
-                process.WaitForExit();
-            }
+          //  using (var process = Process.Start(processinfo))
+          //  {
+          //      process.WaitForExit();
+          //  }
 
 
-            Thread.Sleep(5000);
+          //  Thread.Sleep(5000);
         }
 
         [Then(@"verify host create button")]
@@ -290,12 +310,14 @@ namespace CNEDEMO.Steps
             CneBrandEditorialPage = new CneBrandEditorialPage(driver);
             CommonPage commonPage = new CommonPage(driver);
             CommonPage.ClickableElement(driver, CneBrandEditorialPage.CreditCreateSeasonButton);
+            Thread.Sleep(3000);
         }
 
 
         [Then(@"verify episode create button")]
         public void ThenVerifyEpisodeCreateButton()
         {
+            WaitHelper.WaitUntilPageLoads(driver);
             CneBrandEditorialPage = new CneBrandEditorialPage(driver);
             CommonPage commonPage = new CommonPage(driver);
             Assert.IsTrue(CommonPage.VerifyElementDisplayed(driver, CneBrandEditorialPage.EpiOrderingCreateSeasonButton));

@@ -92,50 +92,13 @@ namespace CNEDEMO.Feature
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("01 Successful Login into CNE admin Portal with Valid Credentials")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("02 Gobal settings brands")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CneGlobalSettings")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
-        public void _01SuccessfulLoginIntoCNEAdminPortalWithValidCredentials()
+        public void _02GobalSettingsBrands()
         {
             string[] tagsOfScenario = new string[] {
                     "Regression"};
-            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 Successful Login into CNE admin Portal with Valid Credentials", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 5
-this.ScenarioInitialize(scenarioInfo);
-#line hidden
-            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
-            {
-                testRunner.SkipScenario();
-            }
-            else
-            {
-                this.ScenarioStart();
-#line 6
-testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line hidden
-#line 7
-testRunner.When("enter username \"eniyan_vetrivel@condenast.com\" and select Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
-#line hidden
-#line 8
-testRunner.Then("enter password \"Welcome@2022\" and select signIn Button to login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
-#line hidden
-#line 9
-testRunner.And("select SendPush button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 10
-testRunner.And("verify page is navigated into Admin portal homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            }
-            this.ScenarioCleanup();
-        }
-        
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("02 Gobal settings brands")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CneGlobalSettings")]
-        public void _02GobalSettingsBrands()
-        {
-            string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 Gobal settings brands", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 14
@@ -154,18 +117,18 @@ testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), (
 #line 16
 testRunner.When("select Gobal settings brands in left side window of homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table11 = new TechTalk.SpecFlow.Table(new string[] {
                             "input_fields"});
-                table9.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "Production"});
-                table9.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "Staging"});
-                table9.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "Sandbox"});
-                table9.AddRow(new string[] {
+                table11.AddRow(new string[] {
                             "Portal Settings"});
 #line 17
-testRunner.Then("verify env_URL link are working", ((string)(null)), table9, "Then ");
+testRunner.Then("verify env_URL link are working", ((string)(null)), table11, "Then ");
 #line hidden
 #line 23
 testRunner.And("select any brand title", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -239,14 +202,14 @@ testRunner.When("select Gobal settings Content Libraries in left side window of 
 #line 39
 testRunner.Then("Select the Gobal settings Content Libraries", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table12 = new TechTalk.SpecFlow.Table(new string[] {
                             "input_fields"});
-                table10.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             ""});
-                table10.AddRow(new string[] {
+                table12.AddRow(new string[] {
                             "ATest"});
 #line 40
-testRunner.And("Enter  value in name", ((string)(null)), table10, "And ");
+testRunner.And("Enter  value in name", ((string)(null)), table12, "And ");
 #line hidden
 #line 44
 testRunner.And("Enter \"Tester\" value in Approvedby", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

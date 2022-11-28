@@ -138,7 +138,9 @@ namespace CNEDEMO.PageObject
         public static void PutTextValue(IWebDriver driver, string xpath, string value)
         {
             WaitForElement(driver, xpath);
-            driver.FindElement(By.XPath(xpath)).SendKeys(value);
+            IWebElement element = driver.FindElement(By.XPath(xpath));
+            element.Clear();
+            element.SendKeys(value);
         }
 
         public static void PutTextValueForTags(IWebDriver driver, string xpath, string value)
@@ -245,7 +247,7 @@ namespace CNEDEMO.PageObject
 
         public static void BrandSelectListValue(IWebDriver driver, string Value)
         {
-            string xpath = "//div[@class = 'cne-brand-dropdown__container']//li[text()='" + Value + "']";
+            string xpath = "//div[@class='cne-brand-dropdown__menu']//li[text()='" + Value + "']";
             WaitForElement(driver, xpath);
             driver.FindElement(By.XPath(xpath)).Click();
         }
@@ -407,7 +409,8 @@ namespace CNEDEMO.PageObject
             
             WaitForElement(driver, xpath);
            IWebElement element = driver.FindElement(By.XPath(xpath));
-            element.SendKeys("Reg_Test/" + randomint + "/2022");
+            element.Clear();
+            element.SendKeys("AReg_Test/" + randomint + "/2022");
         }
 
     }

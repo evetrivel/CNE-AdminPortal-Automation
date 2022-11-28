@@ -160,6 +160,9 @@ testRunner.Then("verify Save order button exist", ((string)(null)), ((TechTalk.S
 #line 18
 testRunner.And("select Add New Series button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+#line 19
+testRunner.And("verify navigating into New Series detials data page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
 #line 20
 testRunner.And("Enter value in \"TestReg\" in new series", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
@@ -204,18 +207,15 @@ testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), (
 testRunner.When("select Series&season in left side window of homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 29
-testRunner.Then("verify Save order button exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("select edit series or Title of the series", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 30
-testRunner.And("select Add New Series button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-#line 31
 testRunner.And("Enter value in \"\" in new series", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 32
-testRunner.And("select create button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 31
+testRunner.And("select update season button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 33
+#line 32
 testRunner.And("verify error msg", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -230,7 +230,7 @@ testRunner.And("verify error msg", ((string)(null)), ((TechTalk.SpecFlow.Table)(
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04 Rearrange the order series by drage n drop in series&season page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 38
+#line 37
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -240,16 +240,19 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 39
+#line 38
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 40
+#line 39
 testRunner.When("select Series&season in left side window of homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 41
+#line 40
 testRunner.Then("verify save order buttton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 43
+#line 41
+testRunner.And("Rearrange the order in Series list by drag and drop", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 42
 testRunner.And("Select save order Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -264,7 +267,7 @@ testRunner.And("Select save order Button", ((string)(null)), ((TechTalk.SpecFlow
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("05 update series and add season in series&season edit page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 46
+#line 45
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -274,118 +277,127 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 47
+#line 46
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 48
+#line 47
 testRunner.When("select Series&season in left side window of homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 49
+#line 48
 testRunner.Then("select edit series or Title of the series", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 50
+#line 49
 testRunner.And("select Add season button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 51
+#line 50
 testRunner.And("enter basic season title \"Season 2\" value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 54
+#line 51
+testRunner.And("select upload poster frame", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 52
+testRunner.And("verify basic create button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 53
 testRunner.And("select host catagory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 55
+#line 54
 testRunner.And("enter host title \"test\" value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 56
+#line 55
 testRunner.And("select hostintro value in dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 58
+#line 56
+testRunner.And("select upload hostimage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 57
 testRunner.And("verify host create button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 59
+#line 58
 testRunner.And("select episodes catagory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 60
+#line 59
 testRunner.And("verify episode create button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 61
+#line 60
 testRunner.And("select credit catagory", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 62
+#line 61
 testRunner.And("enter maincredits name \"testmaincredits\" value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 63
+#line 62
 testRunner.And("select maincredits celebrity value in dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 64
+#line 63
 testRunner.And("select maincredits addnew button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 65
+#line 64
 testRunner.And("remove newly added maincredits name value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 66
+#line 65
 testRunner.And("enter Featured credits name \"testFeatured\" value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 67
+#line 66
 testRunner.And("select Featured credits celebrity value in dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 68
+#line 67
 testRunner.And("select Featured credits addnew button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 69
+#line 68
 testRunner.And("remove newly addedFeatured credits name value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 70
+#line 69
 testRunner.And("enter directorcredits name \"testdirectorcredits\" value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 71
+#line 70
 testRunner.And("select directorcredits celebrity value in dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 72
+#line 71
 testRunner.And("select directorcredits addnew button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 73
+#line 72
 testRunner.And("remove newly addeddirectorcredits name value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 74
+#line 73
 testRunner.And("enter productioncredits name \"testproductioncredits\" value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 75
+#line 74
 testRunner.And("select productioncredits productionrole value in dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 76
+#line 75
 testRunner.And("select productioncredits addnew button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 77
+#line 76
 testRunner.And("remove newly addedproductioncredits name value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 78
+#line 77
 testRunner.And("enter videorgrapher \"testvg\" value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 79
+#line 78
 testRunner.And("select videorgrapher addnew button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 80
+#line 79
 testRunner.And("remove newly added videographer name value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 81
+#line 80
 testRunner.And("enter legalcredits name \"testlegalcredits\" value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 82
+#line 81
 testRunner.And("select credit create button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 83
+#line 82
 testRunner.And("verfiy newly created season", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 84
+#line 83
 testRunner.And("verify newly created season delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 85
+#line 84
 testRunner.And("select newly created season edit button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 86
+#line 85
 testRunner.And("enter basic tag \"test\" value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 87
+#line 86
 testRunner.And("select update season button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -400,7 +412,7 @@ testRunner.And("select update season button", ((string)(null)), ((TechTalk.SpecF
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("06 Nagetive scenario update series and add season in series&season edit page", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 89
+#line 88
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -410,22 +422,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 90
+#line 89
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 91
+#line 90
 testRunner.When("select Series&season in left side window of homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 92
+#line 91
 testRunner.Then("select edit series or Title of the series", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 93
+#line 92
 testRunner.And("select Add season button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 94
+#line 93
 testRunner.And("enter basic season title \"\" value", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 95
+#line 94
 testRunner.And("verify error msg in season page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -440,7 +452,7 @@ testRunner.And("verify error msg in season page", ((string)(null)), ((TechTalk.S
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("07 Add new playlist", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 100
+#line 99
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -450,25 +462,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 101
+#line 100
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 102
+#line 101
 testRunner.When("select Playlists in left side window of homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 103
+#line 102
 testRunner.Then("select the addnew buttton", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 104
+#line 103
 testRunner.And("enter \'Atestxyz\' Title in Tttle for New Playlists box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 105
+#line 104
 testRunner.And("select OK button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 106
+#line 105
 testRunner.And("verify newly added playlist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 107
+#line 106
 testRunner.And("verify playlistsActiveSubcarousel Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -483,7 +495,7 @@ testRunner.And("verify playlistsActiveSubcarousel Button", ((string)(null)), ((T
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("08 Active/non active/programing playlist", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 110
+#line 109
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -493,31 +505,31 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 111
+#line 110
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 112
+#line 111
 testRunner.When("select Playlists in left side window of homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 113
+#line 112
 testRunner.Then("select the [not selected] dropdpwn list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 115
+#line 114
 testRunner.And("select Active in the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 116
+#line 115
 testRunner.And("verify the result of Active  playlist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 117
+#line 116
 testRunner.And("select non active in the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 118
+#line 117
 testRunner.And("verify the result of non active playlist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 119
+#line 118
 testRunner.And("select programing in the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 120
+#line 119
 testRunner.And("verify the result of programing playlist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -532,7 +544,7 @@ testRunner.And("verify the result of programing playlist", ((string)(null)), ((T
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("09 Edit playlist", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 123
+#line 122
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -542,49 +554,49 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 124
+#line 123
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 125
+#line 124
 testRunner.When("select Playlists in left side window of homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 126
+#line 125
 testRunner.Then("select view playlist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 127
+#line 126
 testRunner.And("verify generateslug button exsist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 128
+#line 127
 testRunner.And("verify SqaurePreview button exsist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 129
+#line 128
 testRunner.And("verify CoustmizedEmbed button exsist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 130
+#line 129
 testRunner.And("verify BranddropDown button exsist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 131
+#line 130
 testRunner.And("verify Sponsored check box  exsist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 132
+#line 131
 testRunner.And("verify AddVideo button exsist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 133
+#line 132
 testRunner.And("verify the delete button exsist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 134
+#line 133
 testRunner.And("select ActiveplaylistsCheckBox Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 135
+#line 134
 testRunner.And("select image to upload", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 136
+#line 135
 testRunner.And("select the save button exsist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 137
+#line 136
 testRunner.Then("select view playlist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 138
+#line 137
 testRunner.And("Select delete button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -597,7 +609,7 @@ testRunner.And("Select delete button", ((string)(null)), ((TechTalk.SpecFlow.Tab
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("email id", emailId);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("10 Add and delete CaptionAlerts Email lists", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 158
+#line 157
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -607,22 +619,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 159
+#line 158
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 160
+#line 159
 testRunner.When("select Email lists in left side window of homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 161
+#line 160
 testRunner.Then(string.Format("enter \"{0}\" in CaptionAlerts email box editable", emailId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 162
+#line 161
 testRunner.And("select Add button exsist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 163
+#line 162
 testRunner.And(string.Format("select \"{0}\" delete button", emailId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 164
+#line 163
 testRunner.And(string.Format("verify \"{0}\" error msg in emaillist", emailId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -636,7 +648,7 @@ testRunner.And(string.Format("verify \"{0}\" error msg in emaillist", emailId), 
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:email id", "eni.com")]
         public void _10AddAndDeleteCaptionAlertsEmailLists_Eni_Com()
         {
-#line 158
+#line 157
 this._10AddAndDeleteCaptionAlertsEmailLists("eni.com", ((string[])(null)));
 #line hidden
         }
@@ -648,7 +660,7 @@ this._10AddAndDeleteCaptionAlertsEmailLists("eni.com", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:email id", "eniyan@gmail.com")]
         public void _10AddAndDeleteCaptionAlertsEmailLists_EniyanGmail_Com()
         {
-#line 158
+#line 157
 this._10AddAndDeleteCaptionAlertsEmailLists("eniyan@gmail.com", ((string[])(null)));
 #line hidden
         }
@@ -660,7 +672,7 @@ this._10AddAndDeleteCaptionAlertsEmailLists("eniyan@gmail.com", ((string[])(null
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:email id", "eniyan@gmail")]
         public void _10AddAndDeleteCaptionAlertsEmailLists_EniyanGmail()
         {
-#line 158
+#line 157
 this._10AddAndDeleteCaptionAlertsEmailLists("eniyan@gmail", ((string[])(null)));
 #line hidden
         }
@@ -672,7 +684,7 @@ this._10AddAndDeleteCaptionAlertsEmailLists("eniyan@gmail", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:email id", "@gmail.com")]
         public void _10AddAndDeleteCaptionAlertsEmailLists_Gmail_Com()
         {
-#line 158
+#line 157
 this._10AddAndDeleteCaptionAlertsEmailLists("@gmail.com", ((string[])(null)));
 #line hidden
         }
@@ -683,7 +695,7 @@ this._10AddAndDeleteCaptionAlertsEmailLists("@gmail.com", ((string[])(null)));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("email id", emailId);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("11 Add and delete PublishedToday Email lists", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 173
+#line 172
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -693,22 +705,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 174
+#line 173
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 175
+#line 174
 testRunner.When("select Email lists in left side window of homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 176
+#line 175
 testRunner.Then(string.Format("enter \"{0}\" in PublishedToday email box editable", emailId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 177
+#line 176
 testRunner.And("select Add button exsist in PublishedToday", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 178
+#line 177
 testRunner.And(string.Format("select \"{0}\" PublishedToday delete button", emailId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 179
+#line 178
 testRunner.And(string.Format("verify \"{0}\" error msg in emaillist", emailId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -722,7 +734,7 @@ testRunner.And(string.Format("verify \"{0}\" error msg in emaillist", emailId), 
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:email id", "eni.com")]
         public void _11AddAndDeletePublishedTodayEmailLists_Eni_Com()
         {
-#line 173
+#line 172
 this._11AddAndDeletePublishedTodayEmailLists("eni.com", ((string[])(null)));
 #line hidden
         }
@@ -734,7 +746,7 @@ this._11AddAndDeletePublishedTodayEmailLists("eni.com", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:email id", "eniyan@gmail.com")]
         public void _11AddAndDeletePublishedTodayEmailLists_EniyanGmail_Com()
         {
-#line 173
+#line 172
 this._11AddAndDeletePublishedTodayEmailLists("eniyan@gmail.com", ((string[])(null)));
 #line hidden
         }
@@ -746,7 +758,7 @@ this._11AddAndDeletePublishedTodayEmailLists("eniyan@gmail.com", ((string[])(nul
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:email id", "eniyan@gmail")]
         public void _11AddAndDeletePublishedTodayEmailLists_EniyanGmail()
         {
-#line 173
+#line 172
 this._11AddAndDeletePublishedTodayEmailLists("eniyan@gmail", ((string[])(null)));
 #line hidden
         }
@@ -758,7 +770,7 @@ this._11AddAndDeletePublishedTodayEmailLists("eniyan@gmail", ((string[])(null)))
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:email id", "@gmail.com")]
         public void _11AddAndDeletePublishedTodayEmailLists_Gmail_Com()
         {
-#line 173
+#line 172
 this._11AddAndDeletePublishedTodayEmailLists("@gmail.com", ((string[])(null)));
 #line hidden
         }
@@ -769,7 +781,7 @@ this._11AddAndDeletePublishedTodayEmailLists("@gmail.com", ((string[])(null)));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("email id", emailId);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("12 Add and delete VideoAlerts Email lists", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 188
+#line 187
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -779,22 +791,22 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 189
+#line 188
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 190
+#line 189
 testRunner.When("select Email lists in left side window of homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 191
+#line 190
 testRunner.Then(string.Format("enter \"{0}\" in VideoAlerts email box editable", emailId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 192
+#line 191
 testRunner.And("select Add button exsist in VideoAlerts", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 193
+#line 192
 testRunner.And(string.Format("select \"{0}\" VideoAlerts delete button", emailId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 194
+#line 193
 testRunner.And(string.Format("verify \"{0}\" error msg in emaillist", emailId), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -808,7 +820,7 @@ testRunner.And(string.Format("verify \"{0}\" error msg in emaillist", emailId), 
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:email id", "eni.com")]
         public void _12AddAndDeleteVideoAlertsEmailLists_Eni_Com()
         {
-#line 188
+#line 187
 this._12AddAndDeleteVideoAlertsEmailLists("eni.com", ((string[])(null)));
 #line hidden
         }
@@ -820,7 +832,7 @@ this._12AddAndDeleteVideoAlertsEmailLists("eni.com", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:email id", "eniyan@gmail.com")]
         public void _12AddAndDeleteVideoAlertsEmailLists_EniyanGmail_Com()
         {
-#line 188
+#line 187
 this._12AddAndDeleteVideoAlertsEmailLists("eniyan@gmail.com", ((string[])(null)));
 #line hidden
         }
@@ -832,7 +844,7 @@ this._12AddAndDeleteVideoAlertsEmailLists("eniyan@gmail.com", ((string[])(null))
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:email id", "eniyan@gmail")]
         public void _12AddAndDeleteVideoAlertsEmailLists_EniyanGmail()
         {
-#line 188
+#line 187
 this._12AddAndDeleteVideoAlertsEmailLists("eniyan@gmail", ((string[])(null)));
 #line hidden
         }
@@ -844,7 +856,7 @@ this._12AddAndDeleteVideoAlertsEmailLists("eniyan@gmail", ((string[])(null)));
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:email id", "@gmail.com")]
         public void _12AddAndDeleteVideoAlertsEmailLists_Gmail_Com()
         {
-#line 188
+#line 187
 this._12AddAndDeleteVideoAlertsEmailLists("@gmail.com", ((string[])(null)));
 #line hidden
         }

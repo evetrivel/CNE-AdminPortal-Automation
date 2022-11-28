@@ -16,7 +16,7 @@ Given CNE admin portal page loaded succesfully
 When select Series&season in left side window of homepage
 Then verify Save order button exist
 And select Add New Series button
-#And verify navigating into New Series detials data page 
+And verify navigating into New Series detials data page 
 And Enter value in "TestReg" in new series
 And select create button
 And verify created Season is exsist
@@ -26,10 +26,9 @@ And select update button
 Scenario: 03 Negative scenario Add New series in admin portal 
 Given CNE admin portal page loaded succesfully  
 When select Series&season in left side window of homepage
-Then verify Save order button exist
-And select Add New Series button 
+Then select edit series or Title of the series
 And Enter value in "" in new series
-And select create button
+And select update season button 
 And verify error msg
 
 
@@ -39,22 +38,22 @@ Scenario: 04 Rearrange the order series by drage n drop in series&season page
 Given CNE admin portal page loaded succesfully
 When select Series&season in left side window of homepage
 Then verify save order buttton
-#And Rearrange the order in Series list by drag and drop
+And Rearrange the order in Series list by drag and drop
 And Select save order Button
 
 
 Scenario: 05 update series and add season in series&season edit page
-Given CNE admin portal page loaded succesfully 
+Given CNE admin portal page loaded succesfully
 When select Series&season in left side window of homepage
 Then select edit series or Title of the series
 And select Add season button  
 And enter basic season title "Season 2" value 
-#And select upload poster frame
-#And verify basic create button
+And select upload poster frame
+And verify basic create button
 And select host catagory 
 And enter host title "test" value
 And select hostintro value in dropdown
-#And select upload hostimage 
+And select upload hostimage 
 And verify host create button
 And select episodes catagory
 And verify episode create button

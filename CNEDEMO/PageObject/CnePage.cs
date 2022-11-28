@@ -140,9 +140,17 @@ namespace CNEDEMO.PageObject
             public string VideoHiddenButton = "(//div[@class = 'pull-right']//a[text()='Make Hidden'])[1]";
         public string VideoEditButtonDrepdown = "(//div[@class = 'span10 cn-page-content']//a)[5]";
         public static string VideoError = "";
+        public string Error1 = "(//div[@id='ui-id-1']//td//span[@class='label label-success'])[1]";
+        public string Error2 = "(//div[@id='ui-id-1']//td//span[@class='label label-success'])[2]";
+        public string Error3 = "(//div[@id='ui-id-1']//td//span[@class='label label-success'])[3]";
+        public string Error4 = "(//div[@id='ui-id-1']//td//span[@class='label label-success'])[4]";
+        public string Error5 = "(//div[@id='ui-id-1']//td//span[@class='label label-success'])[5]";
+        public string Error6 = "(//div[@id='ui-id-1']//td//span[@class='label label-success'])[6]";
+        public string Error7 = "(//div[@id='ui-id-1']//td//span[@class='label label-success'])[7]";
         public void error()
         {
             Thread.Sleep(5000);
+            
             VideoError = driver.FindElement(By.XPath(ErrorVideoLogDetials)).Text;
         }
 

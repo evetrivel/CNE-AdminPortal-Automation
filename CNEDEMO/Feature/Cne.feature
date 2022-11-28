@@ -1,65 +1,65 @@
 ﻿@Regression
 Feature: Cne
 
-Scenario: 01 Successful Login into CNE admin Portal with Valid Credentials 
-Given CNE admin portal page loaded succesfully
-When enter username "eniyan_vetrivel@condenast.com" and select Next button
-Then enter password "Welcome@2022" and select signIn Button to login page
-And select SendPush button
-And verify page is navigated into Admin portal homepage  
+#Scenario: 01 Successful Login into CNE admin Portal with Valid Credentials 
+#Given CNE admin portal page loaded succesfully
+#When enter username "eniyan_vetrivel@condenast.com" and select Next button
+#Then enter password "Welcome@2022" and select signIn Button to login page
+#And select SendPush button
+#And verify page is navigated into Admin portal homepage  
 
-#Scenario: 02 homepage check brands (scenario)
-#given cne admin portal page loaded succesfully
-#when verify the home page title "cne admin (staging)"
-#then verify the cne logo in home page 
-#
-#Scenario outline: 03 select brand in admin portal (scenario)
-#Given CNE admin portal page loaded succesfully
-#When Select select brand drop down button
-#Then select "<select brands>" in the list and verify brand logo
-#And verify selected brand logo in admin portal page 
-#Examples:
-#|select brands|
-#|acme test brand|
-#|allure         |
-#|architectural digest|
-#|ars technica|
-#|bon appétit|	
-#|condé nast traveler|
-#|epicurious|
-#|gq|
-#|glamour|
-#|golf digest|
-#|iris|
-#|pitchfork|
-#|self|
-#|teen vogue|
-#|the new yorker|
-#|the scene|
-#|vanity fair|
-#|vogue|
-#|wired|
-#|them.|
-#|cni channels ▸|
-#
-#Scenario: 04 verify go back button
-#Given CNE admin portal page loaded succesfully
-#When Select select brand drop down button
-#Then select "cni channels ▸" in the list	
-#And verify "◂ go back" button is exists
-#Then verify Countries in CNI channels 
-#|countries|
-#|france|
-#|germany|
-#|india|
-#|italy|
-#|japan|
-#|mexico|
-#|russia|
-#|spain|
-#|taiwan|
-#|united kingdom|
-#|united states|
+Scenario: 02 homepage check brands 
+Given CNE admin portal page loaded succesfully
+When verify the home page title "CNE Admin (Staging)"
+Then verify the CNE logo in home page 
+
+Scenario Outline: 03 select brand in admin portal 
+Given CNE admin portal page loaded succesfully
+When Select select brand drop down button
+Then select "<select brands>" in the list and verify brand logo
+And verify selected brand logo in admin portal page 
+Examples:
+|select brands|
+|Acme Test Brand|
+|Allure         |
+|Architectural Digest|
+|Ars Technica|
+|Bon Appétit|	
+|Condé Nast Traveler|
+|Epicurious|
+|GQ|
+|Glamour|
+|Golf Digest|
+|Iris|
+|Pitchfork|
+|SELF|
+|Teen Vogue|
+|The New Yorker|
+|The Scene|
+|Vanity Fair|
+|Vogue|
+|WIRED|
+|them.|
+|CNI Channels ▸|
+
+Scenario: 04 verify go back button
+Given CNE admin portal page loaded succesfully
+When Select select brand drop down button
+Then select "CNI Channels ▸" in the list	
+And verify "◂ Go Back" button is exists
+Then verify Countries in CNI channels 
+|Countries|
+|France|
+|Germany|
+|India|
+|Italy|
+|Japan|
+|Mexico|
+|Russia|
+|Spain|
+|Taiwan|
+|United Kingdom|
+|United States|
 
 Scenario Outline: 05 Add New Video in admin portal 
 Given CNE admin portal page loaded succesfully 
@@ -180,7 +180,15 @@ Then select "<Select brands>" in the list and verify brand logo
 And select recent video title link
 And seelct the video log icon
 And verify the video log details 
-And verify error in video log details 
+And verify error in video log status details
+| input_fields |
+| Status1      |
+| Status2      |
+| Status3      |
+| Status4      |
+| Status5      |
+| Status6      |
+| Status7      |
 And select the close button in log   
 And verify the edit icon 
 And verify the URL link

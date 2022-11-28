@@ -39,7 +39,7 @@ namespace CNEDEMO.PageObject
         public string SelectImageToUpload2 = "(//div[@class = 'span10 cn-page-content']//span[@class='button btn'])[2]";
         
         public string SeriesCategories = "(//div[@class = 'span10 cn-page-content']//input[@type='text'])[2]";
-        public string InvalidInputErrorMsg = "//div[@class='cn-body container-fluid']//div[@class='alert alert-error']/a";
+        public string InvalidInputErrorMsg = "//div[@class = 'span10 cn-page-content']//div[@id='error_explanation']/h2";
         public string InvalidInputSeasonTitleErrorMsg = "(//div[@class='span10 cn-page-content']//span)[1]";
         
         public string HostButton = "//div[@class = 'span10 cn-page-content']//a[text()='Host']";

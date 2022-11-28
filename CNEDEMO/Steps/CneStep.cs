@@ -38,7 +38,8 @@ namespace CNEDEMO.Steps
         {
             CnePages = new CnePages(driver);
             CommonPage commonPage = new CommonPage(driver);
-            Assert.IsTrue(commonPage.ValidateBrowserExactTitle(windowTitle));
+            string Value = driver.Title;
+            Assert.AreEqual(windowTitle , Value);
         }
 
         [Then(@"verify the CNE logo in home page")]
@@ -82,7 +83,7 @@ namespace CNEDEMO.Steps
             CommonPage commonPage = new CommonPage(driver);
             CommonPage.BrandSelectListValue(driver, brand);
             //CommonPage.SelectFromDropDown(driver, CnePages.SelectBrandButton, brand , "SelectByText");
-            Thread.Sleep(5000);
+            Thread.Sleep(3000);
         }
 
         [Then(@"select ""(.*)"" in the list")]
@@ -91,7 +92,7 @@ namespace CNEDEMO.Steps
             CnePages = new CnePages(driver);
             CommonPage commonPage = new CommonPage(driver);
             CommonPage.BrandSelectListValue(driver, Value);
-            Thread.Sleep(5000);
+            Thread.Sleep(3000);
         }
 
         [Then(@"verify ""(.*)"" button is exists")]
@@ -101,7 +102,7 @@ namespace CNEDEMO.Steps
             CommonPage commonPage = new CommonPage(driver);
             Assert.IsTrue(CommonPage.VerifyListedCountryDisplayed(driver, Value));
             //CommonPage.BrandSelectListValue(driver, Value);
-            Thread.Sleep(5000);
+            Thread.Sleep(3000);
         }
 
 
@@ -557,7 +558,7 @@ namespace CNEDEMO.Steps
         public void ThenWaitUntilVideoGetUploaded()
         {
             WaitHelper.WaitUntilPageLoads(driver);
-            Thread.Sleep(20000);
+            Thread.Sleep(60000);
         }
 
         [Then(@"select close button")]
@@ -566,6 +567,7 @@ namespace CNEDEMO.Steps
             CnePages = new CnePages(driver);
             driver.SwitchTo().ParentFrame();
             CommonPage commonPage = new CommonPage(driver);
+            Thread.Sleep(60000);
             CommonPage.ClickableElement(driver, CnePages.Closebutton);
         }
 
@@ -592,6 +594,7 @@ namespace CNEDEMO.Steps
         {
             CnePages = new CnePages(driver);
             CommonPage commonPage = new CommonPage(driver);
+            Thread.Sleep(10000);
             Assert.IsTrue(CommonPage.VerifyElementDisplayed(driver, CnePages.OOAnimatedThumbnail));
         }
 
@@ -811,8 +814,58 @@ namespace CNEDEMO.Steps
             CnePages = new CnePages(driver);
             driver.SwitchTo().ParentFrame();
             CommonPage commonPage = new CommonPage(driver);
-            CnePages.error();
-            Assert.AreNotEqual("error", CnePages.getSavederror());
+            Assert.IsFalse(CommonPage.VerifyElementDisplayed(driver, CnePages.ErrorVideoLogDetials));
+           // CnePages.error();
+           // Assert.AreNotEqual("error", CnePages.getSavederror());
+        }
+
+        [Then(@"verify error in video log status details")]
+        public void ThenVerifyErrorInVideoLogStatusDetails(Table table)
+        {
+            CnePages = new CnePages(driver);
+            CommonPage commonPage = new CommonPage(driver);
+
+            for (int i = 0; i < table.Rows.Count; i++)
+            {
+                switch (table.Rows[i]["input_fields"])
+                {
+                    case "Status1":
+                        Console.WriteLine(table.Rows[i]["input_fields"]);                        
+                        Thread.Sleep(3000);
+                        Assert.AreNotEqual("error", CommonPage.GetTextValue(driver, CnePages.Error1));
+                        break;
+                    case "Status2":
+                        Console.WriteLine(table.Rows[i]["input_fields"]);
+                        Thread.Sleep(3000);
+                        Assert.AreNotEqual("error", CommonPage.GetTextValue(driver, CnePages.Error2));
+                        break;
+                    case "Status3":
+                        Console.WriteLine(table.Rows[i]["input_fields"]);
+                        Thread.Sleep(3000);
+                        Assert.AreNotEqual("error", CommonPage.GetTextValue(driver, CnePages.Error3));
+                        break;
+                    case "Status4":
+                        Console.WriteLine(table.Rows[i]["input_fields"]);
+                        Thread.Sleep(3000);
+                        Assert.AreNotEqual("error", CommonPage.GetTextValue(driver, CnePages.Error4));
+                        break;
+                    case "Status5":
+                        Console.WriteLine(table.Rows[i]["input_fields"]);
+                        Thread.Sleep(3000);
+                        Assert.AreNotEqual("error", CommonPage.GetTextValue(driver, CnePages.Error5));
+                        break;
+                    case "Status6":
+                        Console.WriteLine(table.Rows[i]["input_fields"]);
+                        Thread.Sleep(3000);
+                        Assert.AreNotEqual("error", CommonPage.GetTextValue(driver, CnePages.Error6));
+                        break;
+                    case "Status7":
+                        Console.WriteLine(table.Rows[i]["input_fields"]);
+                        Thread.Sleep(3000);
+                        Assert.AreNotEqual("error", CommonPage.GetTextValue(driver, CnePages.Error7));
+                        break;
+                }
+            }
         }
 
 

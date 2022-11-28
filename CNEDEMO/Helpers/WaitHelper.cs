@@ -88,7 +88,7 @@ namespace CNEDEMO.Helpers
 
 
 
-        public static void WaitUntilElementVisible(IWebDriver driver, By elementLocator, int timeout = 30)
+        public static void WaitUntilElementVisible(IWebDriver driver, By elementLocator, int timeout = 45)
         {
             new WebDriverWait(driver, new TimeSpan(0, 0, timeout)).Until(
                 ExpectedConditions.ElementIsVisible(elementLocator));

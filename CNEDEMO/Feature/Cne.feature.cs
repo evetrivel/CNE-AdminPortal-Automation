@@ -93,15 +93,15 @@ namespace CNEDEMO.Feature
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("01 Successful Login into CNE admin Portal with Valid Credentials")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("02 homepage check brands")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
-        public void _01SuccessfulLoginIntoCNEAdminPortalWithValidCredentials()
+        public void _02HomepageCheckBrands()
         {
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("01 Successful Login into CNE admin Portal with Valid Credentials", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 4
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("02 homepage check brands", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 11
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -111,20 +111,381 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 5
+#line 12
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 6
-testRunner.When("enter username \"eniyan_vetrivel@condenast.com\" and select Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line 13
+testRunner.When("verify the home page title \"CNE Admin (Staging)\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 7
-testRunner.Then("enter password \"Welcome@2022\" and select signIn Button to login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 14
+testRunner.Then("verify the CNE logo in home page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 8
-testRunner.And("select SendPush button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            }
+            this.ScenarioCleanup();
+        }
+        
+        public virtual void _03SelectBrandInAdminPortal(string selectBrands, string[] exampleTags)
+        {
+            string[] tagsOfScenario = exampleTags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("select brands", selectBrands);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("03 select brand in admin portal", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 16
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
-#line 9
-testRunner.And("verify page is navigated into Admin portal homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 17
+testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 18
+testRunner.When("Select select brand drop down button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 19
+testRunner.Then(string.Format("select \"{0}\" in the list and verify brand logo", selectBrands), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 20
+testRunner.And("verify selected brand logo in admin portal page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: Acme Test Brand")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Acme Test Brand")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "Acme Test Brand")]
+        public void _03SelectBrandInAdminPortal_AcmeTestBrand()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("Acme Test Brand", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: Allure")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Allure")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "Allure")]
+        public void _03SelectBrandInAdminPortal_Allure()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("Allure", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: Architectural Digest")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Architectural Digest")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "Architectural Digest")]
+        public void _03SelectBrandInAdminPortal_ArchitecturalDigest()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("Architectural Digest", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: Ars Technica")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Ars Technica")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "Ars Technica")]
+        public void _03SelectBrandInAdminPortal_ArsTechnica()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("Ars Technica", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: Bon Appétit")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Bon Appétit")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "Bon Appétit")]
+        public void _03SelectBrandInAdminPortal_BonAppetit()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("Bon Appétit", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: Condé Nast Traveler")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Condé Nast Traveler")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "Condé Nast Traveler")]
+        public void _03SelectBrandInAdminPortal_CondeNastTraveler()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("Condé Nast Traveler", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: Epicurious")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Epicurious")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "Epicurious")]
+        public void _03SelectBrandInAdminPortal_Epicurious()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("Epicurious", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: GQ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "GQ")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "GQ")]
+        public void _03SelectBrandInAdminPortal_GQ()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("GQ", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: Glamour")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Glamour")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "Glamour")]
+        public void _03SelectBrandInAdminPortal_Glamour()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("Glamour", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: Golf Digest")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Golf Digest")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "Golf Digest")]
+        public void _03SelectBrandInAdminPortal_GolfDigest()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("Golf Digest", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: Iris")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Iris")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "Iris")]
+        public void _03SelectBrandInAdminPortal_Iris()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("Iris", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: Pitchfork")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Pitchfork")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "Pitchfork")]
+        public void _03SelectBrandInAdminPortal_Pitchfork()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("Pitchfork", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: SELF")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "SELF")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "SELF")]
+        public void _03SelectBrandInAdminPortal_SELF()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("SELF", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: Teen Vogue")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Teen Vogue")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "Teen Vogue")]
+        public void _03SelectBrandInAdminPortal_TeenVogue()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("Teen Vogue", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: The New Yorker")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "The New Yorker")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "The New Yorker")]
+        public void _03SelectBrandInAdminPortal_TheNewYorker()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("The New Yorker", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: The Scene")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "The Scene")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "The Scene")]
+        public void _03SelectBrandInAdminPortal_TheScene()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("The Scene", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: Vanity Fair")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Vanity Fair")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "Vanity Fair")]
+        public void _03SelectBrandInAdminPortal_VanityFair()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("Vanity Fair", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: Vogue")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Vogue")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "Vogue")]
+        public void _03SelectBrandInAdminPortal_Vogue()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("Vogue", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: WIRED")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "WIRED")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "WIRED")]
+        public void _03SelectBrandInAdminPortal_WIRED()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("WIRED", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: them.")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "them.")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "them.")]
+        public void _03SelectBrandInAdminPortal_Them_()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("them.", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("03 select brand in admin portal: CNI Channels ▸")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "CNI Channels ▸")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:select brands", "CNI Channels ▸")]
+        public void _03SelectBrandInAdminPortal_CNIChannels()
+        {
+#line 16
+this._03SelectBrandInAdminPortal("CNI Channels ▸", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("04 verify go back button")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        public void _04VerifyGoBackButton()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("04 verify go back button", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 45
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 46
+testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 47
+testRunner.When("Select select brand drop down button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 48
+testRunner.Then("select \"CNI Channels ▸\" in the list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 49
+testRunner.And("verify \"◂ Go Back\" button is exists", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                            "Countries"});
+                table1.AddRow(new string[] {
+                            "France"});
+                table1.AddRow(new string[] {
+                            "Germany"});
+                table1.AddRow(new string[] {
+                            "India"});
+                table1.AddRow(new string[] {
+                            "Italy"});
+                table1.AddRow(new string[] {
+                            "Japan"});
+                table1.AddRow(new string[] {
+                            "Mexico"});
+                table1.AddRow(new string[] {
+                            "Russia"});
+                table1.AddRow(new string[] {
+                            "Spain"});
+                table1.AddRow(new string[] {
+                            "Taiwan"});
+                table1.AddRow(new string[] {
+                            "United Kingdom"});
+                table1.AddRow(new string[] {
+                            "United States"});
+#line 50
+testRunner.Then("verify Countries in CNI channels", ((string)(null)), table1, "Then ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -170,23 +531,23 @@ testRunner.And("verify Cancel and Save button exsist", ((string)(null)), ((TechT
 #line 72
 testRunner.And("select O&O dropdown", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                             "input_fields",
                             "Value"});
-                table1.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "O&O Title",
                             "test123"});
-                table1.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "O&O Categories list",
                             "user testing"});
-                table1.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "O&O Description",
                             "testdata"});
-                table1.AddRow(new string[] {
+                table2.AddRow(new string[] {
                             "O&O Tags",
                             "test"});
 #line 73
-testRunner.And("Enter value in O&O tab", ((string)(null)), table1, "And ");
+testRunner.And("Enter value in O&O tab", ((string)(null)), table2, "And ");
 #line hidden
 #line 79
 testRunner.And("Select Slug button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -200,38 +561,38 @@ testRunner.And("select youtube and facebook check box", ((string)(null)), ((Tech
 #line 82
 testRunner.And("select youtube tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                            "input_fields",
-                            "Value"});
-                table2.AddRow(new string[] {
-                            "YouTube Channel",
-                            "CondéNast TestChannel"});
-                table2.AddRow(new string[] {
-                            "YouTube Tags",
-                            "testdata"});
-                table2.AddRow(new string[] {
-                            "YouTube Category",
-                            "Comedy"});
-                table2.AddRow(new string[] {
-                            "YouTube Description",
-                            "www.usertesting.com"});
-#line 83
-testRunner.And("Enter value in youtube tab", ((string)(null)), table2, "And ");
-#line hidden
-#line 89
-testRunner.And("select Facebook tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
                 TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                             "input_fields",
                             "Value"});
                 table3.AddRow(new string[] {
-                            "Facebook Tags",
+                            "YouTube Channel",
+                            "CondéNast TestChannel"});
+                table3.AddRow(new string[] {
+                            "YouTube Tags",
                             "testdata"});
                 table3.AddRow(new string[] {
+                            "YouTube Category",
+                            "Comedy"});
+                table3.AddRow(new string[] {
+                            "YouTube Description",
+                            "www.usertesting.com"});
+#line 83
+testRunner.And("Enter value in youtube tab", ((string)(null)), table3, "And ");
+#line hidden
+#line 89
+testRunner.And("select Facebook tab", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                            "input_fields",
+                            "Value"});
+                table4.AddRow(new string[] {
+                            "Facebook Tags",
+                            "testdata"});
+                table4.AddRow(new string[] {
                             "Facebook Description",
                             "www.condenast.com"});
 #line 90
-testRunner.And("Enter value in Facebook tab", ((string)(null)), table3, "And ");
+testRunner.And("Enter value in Facebook tab", ((string)(null)), table4, "And ");
 #line hidden
 #line 94
 testRunner.And("Select Save Button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -456,17 +817,17 @@ testRunner.And("select recent video edit drop down icon", ((string)(null)), ((Te
 #line 149
 testRunner.And("select  Externals ID category", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                             "input_fields",
                             "Value"});
-                table4.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "Facebook",
                             "76345782"});
-                table4.AddRow(new string[] {
+                table5.AddRow(new string[] {
                             "youtube",
                             "657481234"});
 #line 150
-testRunner.And("Enter value in youtube and FB field", ((string)(null)), table4, "And ");
+testRunner.And("Enter value in youtube and FB field", ((string)(null)), table5, "And ");
 #line hidden
 #line 154
 testRunner.And("Select Save button in EID", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -474,17 +835,17 @@ testRunner.And("Select Save button in EID", ((string)(null)), ((TechTalk.SpecFlo
 #line 155
 testRunner.And("select  O&O Geofencing  category", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                             "input_fields",
                             "Value"});
-                table5.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "Blocked In",
                             "Pakistan"});
-                table5.AddRow(new string[] {
+                table6.AddRow(new string[] {
                             "Available In",
                             "Albania"});
 #line 156
-testRunner.And("Select value in Blocked In and Available In", ((string)(null)), table5, "And ");
+testRunner.And("Select value in Blocked In and Available In", ((string)(null)), table6, "And ");
 #line hidden
 #line 160
 testRunner.And("Select save button in O&O Geofencing", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
@@ -567,56 +928,72 @@ testRunner.And("seelct the video log icon", ((string)(null)), ((TechTalk.SpecFlo
 #line 182
 testRunner.And("verify the video log details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
+                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                            "input_fields"});
+                table7.AddRow(new string[] {
+                            "Status1"});
+                table7.AddRow(new string[] {
+                            "Status2"});
+                table7.AddRow(new string[] {
+                            "Status3"});
+                table7.AddRow(new string[] {
+                            "Status4"});
+                table7.AddRow(new string[] {
+                            "Status5"});
+                table7.AddRow(new string[] {
+                            "Status6"});
+                table7.AddRow(new string[] {
+                            "Status7"});
 #line 183
-testRunner.And("verify error in video log details", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("verify error in video log status details", ((string)(null)), table7, "And ");
 #line hidden
-#line 184
+#line 192
 testRunner.And("select the close button in log", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 185
+#line 193
 testRunner.And("verify the edit icon", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 186
+#line 194
 testRunner.And("verify the URL link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 187
+#line 195
 testRunner.And("Select the generate button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 188
+#line 196
 testRunner.And("verify the generate preview link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 189
+#line 197
 testRunner.And("verify the delete button in generate link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 190
+#line 198
 testRunner.And("verify the FB link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 191
+#line 199
 testRunner.And("verify the youtube link", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
                             "input_fields",
                             "Value"});
-                table6.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "sourceLink",
                             "source"});
-                table6.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "highLink",
                             "high"});
-                table6.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "lowLink",
                             "low"});
-                table6.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "mobileLink",
                             "mobile"});
-                table6.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "hlsLink",
                             "hls"});
-                table6.AddRow(new string[] {
+                table8.AddRow(new string[] {
                             "O&O PosterFrameLink",
                             "O&O Poster Frame"});
-#line 192
-testRunner.And("select DOWNLOAD ENCODED VIDEO FILES", ((string)(null)), table6, "And ");
+#line 200
+testRunner.And("select DOWNLOAD ENCODED VIDEO FILES", ((string)(null)), table8, "And ");
 #line hidden
             }
             this.ScenarioCleanup();
@@ -644,7 +1021,7 @@ this._09AddedVideoUrlLinksAndLogDetials("Acme Test Brand", ((string[])(null)));
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("10 all brands videos in admin portals", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 205
+#line 213
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -654,55 +1031,55 @@ this._09AddedVideoUrlLinksAndLogDetials("Acme Test Brand", ((string[])(null)));
             else
             {
                 this.ScenarioStart();
-#line 206
+#line 214
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 207
+#line 215
 testRunner.When("select All brand videos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 208
+#line 216
 testRunner.Then("verify the total count of videos at bottom of the page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 209
+#line 217
 testRunner.And("select Rows per page count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table7 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table9 = new TechTalk.SpecFlow.Table(new string[] {
                             "input_fields",
                             "Value"});
-                table7.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             "10",
                             "10"});
-                table7.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             "25",
                             "25"});
-                table7.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             "50",
                             "50"});
-                table7.AddRow(new string[] {
+                table9.AddRow(new string[] {
                             "100",
                             "100"});
-#line 210
-testRunner.And("verify page count values", ((string)(null)), table7, "And ");
+#line 218
+testRunner.And("verify page count values", ((string)(null)), table9, "And ");
 #line hidden
-#line 216
+#line 224
 testRunner.And("select the next page page button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 217
+#line 225
 testRunner.And("select the previuos page page button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 218
+#line 226
 testRunner.And("verify the video count", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 219
+#line 227
 testRunner.And("enter any valid video id \"54d3f85961646d0b19040000\" in search box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 220
+#line 228
 testRunner.And("select search  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 221
+#line 229
 testRunner.And("verify the results video", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 222
+#line 230
 testRunner.And("select clear  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -718,7 +1095,7 @@ testRunner.And("select clear  button", ((string)(null)), ((TechTalk.SpecFlow.Tab
             string[] tagsOfScenario = ((string[])(null));
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("11 Global Localization in admin portals", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 224
+#line 232
   this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -728,61 +1105,61 @@ testRunner.And("select clear  button", ((string)(null)), ((TechTalk.SpecFlow.Tab
             else
             {
                 this.ScenarioStart();
-#line 225
+#line 233
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 226
+#line 234
 testRunner.When("select Global Localization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 227
+#line 235
 testRunner.Then("select the copy button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 230
+#line 238
 testRunner.And("select exit popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 231
+#line 239
 testRunner.And("verify More button exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 232
+#line 240
 testRunner.And("Select the more button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 233
+#line 241
 testRunner.And("select view detials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 234
+#line 242
 testRunner.And("select Download", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-                TechTalk.SpecFlow.Table table8 = new TechTalk.SpecFlow.Table(new string[] {
+                TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
                             "input_fields",
                             "Value"});
-                table8.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "sourceLink",
                             "Source File"});
-                table8.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "highLink",
                             "MP4 (High Quality)"});
-                table8.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "lowLink",
                             "MP4 (Low Quality)"});
-                table8.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "Thumbnail",
                             "Thumbnail"});
-                table8.AddRow(new string[] {
+                table10.AddRow(new string[] {
                             "hlsLink",
                             "HLS"});
-#line 235
-testRunner.And("select DOWNLOAD ENCODED VIDEO FILES in dropdown", ((string)(null)), table8, "And ");
+#line 243
+testRunner.And("select DOWNLOAD ENCODED VIDEO FILES in dropdown", ((string)(null)), table10, "And ");
 #line hidden
-#line 242
+#line 250
 testRunner.And("select youtube in Global view detials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 243
+#line 251
 testRunner.And("select exit detials popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 244
+#line 252
 testRunner.And("enter any valid video id \"54d3f85961646d0b19040000\" in Global search box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 245
+#line 253
 testRunner.And("verify the results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -795,7 +1172,7 @@ testRunner.And("verify the results", ((string)(null)), ((TechTalk.SpecFlow.Table
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("edit drop down list", editDropDownList);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("12 verify Video detials, hidden and delete button in admin portal", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 247
+#line 255
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -805,25 +1182,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 248
+#line 256
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 249
+#line 257
 testRunner.When("Select select brand drop down button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 250
+#line 258
 testRunner.Then("select \"Acme Test Brand\" in the list and verify brand logo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 251
+#line 259
 testRunner.And("verify Hidden and delete button is exsist in all videos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 252
+#line 260
 testRunner.And("select any video edit drop down button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 253
+#line 261
 testRunner.And(string.Format("verify \"{0}\"", editDropDownList), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 254
+#line 262
 testRunner.And("verify navigation video editing page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -838,7 +1215,7 @@ testRunner.And("verify navigation video editing page", ((string)(null)), ((TechT
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:edit drop down list", "Metadata")]
         public void _12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal_Metadata()
         {
-#line 247
+#line 255
 this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("Metadata", ((string[])(null)));
 #line hidden
         }
@@ -851,7 +1228,7 @@ this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("Metadata", ((strin
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:edit drop down list", "Video Media")]
         public void _12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal_VideoMedia()
         {
-#line 247
+#line 255
 this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("Video Media", ((string[])(null)));
 #line hidden
         }
@@ -864,7 +1241,7 @@ this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("Video Media", ((st
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:edit drop down list", "External IDs")]
         public void _12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal_ExternalIDs()
         {
-#line 247
+#line 255
 this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("External IDs", ((string[])(null)));
 #line hidden
         }
@@ -878,7 +1255,7 @@ this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("External IDs", ((s
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:edit drop down list", "O&O Geofencing")]
         public void _12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal_OOGeofencing()
         {
-#line 247
+#line 255
 this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("O&O Geofencing", ((string[])(null)));
 #line hidden
         }
@@ -892,7 +1269,7 @@ this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("O&O Geofencing", (
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:edit drop down list", "Mid-roll Cue Points")]
         public void _12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal_Mid_RollCuePoints()
         {
-#line 247
+#line 255
 this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("Mid-roll Cue Points", ((string[])(null)));
 #line hidden
         }
