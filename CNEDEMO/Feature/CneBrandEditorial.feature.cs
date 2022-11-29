@@ -115,13 +115,13 @@ this.ScenarioInitialize(scenarioInfo);
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 6
-testRunner.When("enter username \"backstage_tester@condenast.com\" and select Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("enter username \"username\" and select Next button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 7
-testRunner.Then("enter password \"uDd}9d>gz35Hns?B\" and select signIn Button to login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then("enter password \"password\" and select signIn Button to login page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
 #line 8
-testRunner.And("enter Q&A \"video\" and select Verify button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("enter Q&A \"Q&A\" and select Verify button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 10
 testRunner.And("verify page is navigated into Admin portal homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");

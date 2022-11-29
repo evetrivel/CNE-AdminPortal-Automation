@@ -25,6 +25,11 @@ namespace CNEDEMO.Helpers
             return GetConfig()["password"];
         }
 
+        public static string GetQA()
+        {
+            return GetConfig()["Q&A"];
+        }
+
 
     }
 }

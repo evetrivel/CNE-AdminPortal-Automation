@@ -3,9 +3,9 @@
 @Regression
 Scenario: 01 Successful Login into CNE admin Portal with Valid Credentials 
 Given CNE admin portal page loaded succesfully
-When enter username "backstage_tester@condenast.com" and select Next button
-Then enter password "uDd}9d>gz35Hns?B" and select signIn Button to login page
-And enter Q&A "video" and select Verify button
+When enter username "username" and select Next button
+Then enter password "password" and select signIn Button to login page
+And enter Q&A "Q&A" and select Verify button
 #And select SendPush button
 And verify page is navigated into Admin portal homepage  
 

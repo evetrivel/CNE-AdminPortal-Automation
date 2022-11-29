@@ -74,7 +74,8 @@ namespace CNEDEMO.Steps
             WaitHelper.WaitUntilPageLoads(driver);
             cnePages = new CnePages(driver);
             commonPage = new CommonPage(driver);
-            CommonPage.PutTextValue(driver, cnePages.UserNameTextBox, value);
+            CommonPage.PutTextValue(driver, cnePages.UserNameTextBox,ConfigHelper.GetUserName());
+            //CommonPage.PutTextValue(driver, cnePages.UserNameTextBox, value);
             CommonPage.ClickableElement(driver, cnePages.NextButton);
         }
 
@@ -85,7 +86,8 @@ namespace CNEDEMO.Steps
             WaitHelper.WaitUntilPageLoads(driver);
             cnePages = new CnePages(driver);
             commonPage = new CommonPage(driver);
-            CommonPage.PutTextValue(driver, cnePages.PassowrdTextBox, value);
+            CommonPage.PutTextValue(driver, cnePages.PassowrdTextBox, ConfigHelper.GetPassword());
+            //CommonPage.PutTextValue(driver, cnePages.PassowrdTextBox, value);
             CommonPage.ClickableElement(driver, cnePages.SigninButton);
         }
 
@@ -102,7 +104,7 @@ namespace CNEDEMO.Steps
         [Then(@"verify page is navigated into Admin portal homepage")]
         public void ThenVerifyPageIsNavigatedIntoAdminPortalHomepage()
         {
-            Thread.Sleep(5000);
+            WaitHelper.WaitUntilPageLoads(driver);
         }
 
 
@@ -113,8 +115,9 @@ namespace CNEDEMO.Steps
             WaitHelper.WaitUntilPageLoads(driver);
             cnePages = new CnePages(driver);
             commonPage = new CommonPage(driver);
-            
-            CommonPage.PutTextValue(driver, cnePages.QA, value);
+            CommonPage.PutTextValue(driver, cnePages.QA, ConfigHelper.GetQA());
+
+            //CommonPage.PutTextValue(driver, cnePages.QA, value);
             CommonPage.ClickableElement(driver, cnePages.Verify);
         }
 
