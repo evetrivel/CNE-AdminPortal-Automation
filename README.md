@@ -153,13 +153,12 @@ namespace CNEDEMO.Steps
 ``` 
  ### AppSettings 
   
-  It stores strings or other values. It is found in a section of Web. config in an ASP.NET website project. We use this feature in the Web
+ The appsettings. json file is generally used to store the application configuration settings such as database connection strings, any application scope global variables, and much other information.
   
   ```C#
   {
   "url": "https://admin-staging.cnevids.com/",
-  "username": "eniyan_vetrivel@condenast.com",
-  "password": "Welcome@2022"
+  "username": "backstage_tester@condenast.com",
 }
 
 ```  
