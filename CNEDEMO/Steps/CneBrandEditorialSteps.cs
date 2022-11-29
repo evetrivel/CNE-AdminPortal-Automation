@@ -67,17 +67,18 @@ namespace CNEDEMO.Steps
         [Then(@"Enter value in ""(.*)"" in new series")]
         public void ThenEnterValueInInNewSeries(string Value)
         {
-            if (Value.Contains(""))
+            if (Value.Contains("TestReg"))
             {
                 CneBrandEditorialPage = new CneBrandEditorialPage(driver);
                 CommonPage commonPage = new CommonPage(driver);
-                //CommonPage.DynamicPutTextValue(driver, CneBrandEditorialPage.TitleNewSeries);
-                CommonPage.PutTextValue(driver, CneBrandEditorialPage.TitleNewSeries, Value);
+                CommonPage.DynamicPutTextValue(driver, CneBrandEditorialPage.TitleNewSeries);
+                //CommonPage.PutTextValue(driver, CneBrandEditorialPage.TitleNewSeries, Value);
             }
             else {
                 CneBrandEditorialPage = new CneBrandEditorialPage(driver);
                 CommonPage commonPage = new CommonPage(driver);
-                CommonPage.DynamicPutTextValue(driver, CneBrandEditorialPage.TitleNewSeries);
+                CommonPage.PutTextValue(driver, CneBrandEditorialPage.TitleNewSeries, Value);
+               // CommonPage.DynamicPutTextValue(driver, CneBrandEditorialPage.TitleNewSeries);
             }
             
             //

@@ -19,6 +19,8 @@ namespace CNEDEMO.PageObject
         }
 
 
+        public string QA = "//div[@class='auth-content']//input[contains (@id, 'input') ]";
+            public string Verify = "//div[@class='auth-content']//input[@type='submit']";
         public string CneLogo = "//div[@class =\"row-fluid\"]//img[@class=\"cn-logo pull-left\"]";
         public string UserNameTextBox = "//div[@class = \"auth-content\"]//input[contains (@id, \"username\")]";
         public string NextButton = "//div[@class = \"o-form-button-bar\"]//input[contains (@value, \"Next\")]";

@@ -229,6 +229,18 @@ And select search  button
 And verify the results video
 And select clear  button 
 
+Scenario Outline: 13 In-brand video search
+Given CNE admin portal page loaded succesfully 
+When Select select brand drop down button
+Then select "<Select brands>" in the list and verify brand logo
+And enter any valid video id "6373d978103e9e6c6f07ea8e" in search box
+And select search  button 
+And verify the results video
+And select clear  button
+Examples:
+|Select brands|
+|Bon Appétit|
+
   Scenario: 11 Global Localization in admin portals
 Given CNE admin portal page loaded succesfully 
 When select Global Localization

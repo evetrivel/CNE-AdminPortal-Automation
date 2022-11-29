@@ -102,9 +102,21 @@ namespace CNEDEMO.Steps
         [Then(@"verify page is navigated into Admin portal homepage")]
         public void ThenVerifyPageIsNavigatedIntoAdminPortalHomepage()
         {
-            Thread.Sleep(40000);
+            Thread.Sleep(5000);
         }
 
+
+
+        [Then(@"enter Q&A ""(.*)"" and select Verify button")]
+        public void ThenEnterQAAndSelectVerifyButton(string value)
+        {
+            WaitHelper.WaitUntilPageLoads(driver);
+            cnePages = new CnePages(driver);
+            commonPage = new CommonPage(driver);
+            
+            CommonPage.PutTextValue(driver, cnePages.QA, value);
+            CommonPage.ClickableElement(driver, cnePages.Verify);
+        }
 
     }
 }

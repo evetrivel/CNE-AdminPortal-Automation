@@ -1086,17 +1086,14 @@ testRunner.And("select clear  button", ((string)(null)), ((TechTalk.SpecFlow.Tab
             this.ScenarioCleanup();
         }
         
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("11 Global Localization in admin portals")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
-        public void _11GlobalLocalizationInAdminPortals()
+        public virtual void _13In_BrandVideoSearch(string selectBrands, string[] exampleTags)
         {
-            string[] tagsOfScenario = ((string[])(null));
+            string[] tagsOfScenario = exampleTags;
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("11 Global Localization in admin portals", null, tagsOfScenario, argumentsOfScenario, featureTags);
+            argumentsOfScenario.Add("Select brands", selectBrands);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("13 In-brand video search", null, tagsOfScenario, argumentsOfScenario, featureTags);
 #line 232
-  this.ScenarioInitialize(scenarioInfo);
+this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
             {
@@ -1109,24 +1106,81 @@ testRunner.And("select clear  button", ((string)(null)), ((TechTalk.SpecFlow.Tab
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
 #line 234
-testRunner.When("select Global Localization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+testRunner.When("Select select brand drop down button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 235
-testRunner.Then("select the copy button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+testRunner.Then(string.Format("select \"{0}\" in the list and verify brand logo", selectBrands), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 236
+testRunner.And("enter any valid video id \"6373d978103e9e6c6f07ea8e\" in search box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 237
+testRunner.And("select search  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 238
-testRunner.And("select exit popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+testRunner.And("verify the results video", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
 #line 239
+testRunner.And("select clear  button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("13 In-brand video search: Bon Appétit")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "Bon Appétit")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:Select brands", "Bon Appétit")]
+        public void _13In_BrandVideoSearch_BonAppetit()
+        {
+#line 232
+this._13In_BrandVideoSearch("Bon Appétit", ((string[])(null)));
+#line hidden
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("11 Global Localization in admin portals")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Cne")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Regression")]
+        public void _11GlobalLocalizationInAdminPortals()
+        {
+            string[] tagsOfScenario = ((string[])(null));
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("11 Global Localization in admin portals", null, tagsOfScenario, argumentsOfScenario, featureTags);
+#line 244
+  this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 245
+testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+#line 246
+testRunner.When("select Global Localization", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 247
+testRunner.Then("select the copy button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+#line 250
+testRunner.And("select exit popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+#line 251
 testRunner.And("verify More button exist", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 240
+#line 252
 testRunner.And("Select the more button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 241
+#line 253
 testRunner.And("select view detials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 242
+#line 254
 testRunner.And("select Download", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
                 TechTalk.SpecFlow.Table table10 = new TechTalk.SpecFlow.Table(new string[] {
@@ -1147,19 +1201,19 @@ testRunner.And("select Download", ((string)(null)), ((TechTalk.SpecFlow.Table)(n
                 table10.AddRow(new string[] {
                             "hlsLink",
                             "HLS"});
-#line 243
+#line 255
 testRunner.And("select DOWNLOAD ENCODED VIDEO FILES in dropdown", ((string)(null)), table10, "And ");
 #line hidden
-#line 250
+#line 262
 testRunner.And("select youtube in Global view detials", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 251
+#line 263
 testRunner.And("select exit detials popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 252
+#line 264
 testRunner.And("enter any valid video id \"54d3f85961646d0b19040000\" in Global search box", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 253
+#line 265
 testRunner.And("verify the results", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1172,7 +1226,7 @@ testRunner.And("verify the results", ((string)(null)), ((TechTalk.SpecFlow.Table
             System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
             argumentsOfScenario.Add("edit drop down list", editDropDownList);
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("12 verify Video detials, hidden and delete button in admin portal", null, tagsOfScenario, argumentsOfScenario, featureTags);
-#line 255
+#line 267
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
             if ((TagHelper.ContainsIgnoreTag(tagsOfScenario) || TagHelper.ContainsIgnoreTag(featureTags)))
@@ -1182,25 +1236,25 @@ this.ScenarioInitialize(scenarioInfo);
             else
             {
                 this.ScenarioStart();
-#line 256
+#line 268
 testRunner.Given("CNE admin portal page loaded succesfully", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
-#line 257
+#line 269
 testRunner.When("Select select brand drop down button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
-#line 258
+#line 270
 testRunner.Then("select \"Acme Test Brand\" in the list and verify brand logo", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
-#line 259
+#line 271
 testRunner.And("verify Hidden and delete button is exsist in all videos", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 260
+#line 272
 testRunner.And("select any video edit drop down button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 261
+#line 273
 testRunner.And(string.Format("verify \"{0}\"", editDropDownList), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
-#line 262
+#line 274
 testRunner.And("verify navigation video editing page", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             }
@@ -1215,7 +1269,7 @@ testRunner.And("verify navigation video editing page", ((string)(null)), ((TechT
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:edit drop down list", "Metadata")]
         public void _12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal_Metadata()
         {
-#line 255
+#line 267
 this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("Metadata", ((string[])(null)));
 #line hidden
         }
@@ -1228,7 +1282,7 @@ this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("Metadata", ((strin
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:edit drop down list", "Video Media")]
         public void _12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal_VideoMedia()
         {
-#line 255
+#line 267
 this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("Video Media", ((string[])(null)));
 #line hidden
         }
@@ -1241,7 +1295,7 @@ this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("Video Media", ((st
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:edit drop down list", "External IDs")]
         public void _12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal_ExternalIDs()
         {
-#line 255
+#line 267
 this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("External IDs", ((string[])(null)));
 #line hidden
         }
@@ -1255,7 +1309,7 @@ this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("External IDs", ((s
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:edit drop down list", "O&O Geofencing")]
         public void _12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal_OOGeofencing()
         {
-#line 255
+#line 267
 this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("O&O Geofencing", ((string[])(null)));
 #line hidden
         }
@@ -1269,7 +1323,7 @@ this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("O&O Geofencing", (
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:edit drop down list", "Mid-roll Cue Points")]
         public void _12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal_Mid_RollCuePoints()
         {
-#line 255
+#line 267
 this._12VerifyVideoDetialsHiddenAndDeleteButtonInAdminPortal("Mid-roll Cue Points", ((string[])(null)));
 #line hidden
         }
